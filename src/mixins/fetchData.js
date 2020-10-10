@@ -7,6 +7,7 @@ export default {
   },
   methods: {
     fetchData(url) {
+      console.log(url);
       this.loading = true;
       this.api = null;
       fetch(`http://localhost:3000${url}`)

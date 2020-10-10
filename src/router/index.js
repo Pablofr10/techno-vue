@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 const Home = () => import('./../views/Home.vue');
 const Contato = () => import('./../views/Contato.vue');
 const Cursos = () => import('./../views/Cursos.vue');
+const Curso = () => import('./../views/Curso.vue');
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,12 @@ const routes = [
     path: '/cursos',
     name: 'cursos',
     component: Cursos,
+  },
+  {
+    path: '/cursos/:curso',
+    name: 'curso',
+    component: Curso,
+    props: true,
   },
 ];
 
