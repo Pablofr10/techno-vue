@@ -4,6 +4,7 @@ const Home = () => import('./../views/Home.vue');
 const Contato = () => import('./../views/Contato.vue');
 const Cursos = () => import('./../views/Cursos.vue');
 const Curso = () => import('./../views/Curso.vue');
+const Aula = () => import('./../views/Aula.vue');
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,14 @@ const routes = [
     name: 'curso',
     component: Curso,
     props: true,
+    children: [
+      {
+        path: ':aula',
+        name: 'aula',
+        component: Aula,
+        props: true,
+      },
+    ],
   },
 ];
 
